@@ -26,34 +26,44 @@ var ChildSchema = new Schema({
     required: true
   },
   music: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   sports: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   videoGames: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   movies: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   artsCrafts: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   collectibles: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   engineering: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   tech: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   outdoor: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   educational: {
-  	type: Boolean
+  	type: Boolean,
+    default: false
   }
 });
 
