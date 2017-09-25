@@ -5,42 +5,69 @@ var Schema = mongoose.Schema;
 
 // Create a Schema for capturing clicks. We'll use clickID to update the same clickCounter
 var ChildSchema = new Schema({
-  childName: {
-    type: String
+  childFirstName: {
+    type: String,
+    unique: true,
+    required: true
+  },
+  childLastName: {
+    type: String,
+    unique: true,
+    required: true
+  },
+  age: {
+    type: Number,
+    unique: true,
+    required: true
+  },
+  gender: {
+    type: String,
+    unique: true,
+    required: true
   },
   music: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   sports: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   videoGames: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   movies: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   artsCrafts: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   collectibles: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   engineering: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   tech: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   outdoor: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   educational: {
-  	type: Boolean
+  	type: Boolean,
+    default: false
   }
 });
 
-// Create the Model
+// Create the Child model with Mongoose
 var Child = mongoose.model("Child", ChildSchema);
 
 // Export it for use elsewhere
