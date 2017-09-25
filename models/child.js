@@ -25,46 +25,19 @@ var ChildSchema = new Schema({
     unique: true,
     required: true
   },
-  music: {
-    type: Boolean,
-    default: false
-  },
-  sports: {
-    type: Boolean,
-    default: false
-  },
-  videoGames: {
-    type: Boolean,
-    default: false
-  },
-  movies: {
-    type: Boolean,
-    default: false
-  },
-  artsCrafts: {
-    type: Boolean,
-    default: false
-  },
-  collectibles: {
-    type: Boolean,
-    default: false
-  },
-  engineering: {
-    type: Boolean,
-    default: false
-  },
-  tech: {
-    type: Boolean,
-    default: false
-  },
-  outdoor: {
-    type: Boolean,
-    default: false
-  },
-  educational: {
-  	type: Boolean,
-    default: false
-  }
+
+  // Create a relation with the Interests model
+  interests: [{
+    type: Schema.Types.ObjectId,
+    ref:'Interest'
+  }]
+
+  // Create a relation with the Special Needs model
+  specialNeeds: [{
+    type: Schema.Types.ObjectId,
+    ref:'specialNeed'
+  }]
+  
 });
 
 // Create the Child model with Mongoose
