@@ -24,7 +24,7 @@ app.get("*", function(req, res) {
 app.get('/parents', function(req, res) {
 
   // Search MongoDB for all parent entries (sort newest to top, assuming Ids increment)
-  parent.find().sort({
+  Parent.find().sort({
       _id: -1
     })
 
@@ -90,7 +90,7 @@ app.post('/add/child/:id', function(req, res) {
     // Or, relate the child to the parent
     else {
       // Push the new child to the list of children in the parent
-      child.findOneAndUpdate({
+      Child.findOneAndUpdate({
           '_id': parentId
         }, {
           $push: {
@@ -160,7 +160,7 @@ app.post('/add/interests/:id', function(req, res) {
     // Or, relate the Interest to the child
     else {
       // Push the new Interest to the list of Interests in the child
-      child.findOneAndUpdate({
+      Child.findOneAndUpdate({
           '_id': childId
         }, {
           $push: {
@@ -220,7 +220,7 @@ app.post('/add/needs/:id', function(req, res) {
     // Or, relate the Special Needs to the child
     else {
       // Push the new special need to the list of Special Needs in the child
-      child.findOneAndUpdate({
+      Child.findOneAndUpdate({
           '_id': childId
         }, {
           $push: {
@@ -254,7 +254,7 @@ app.post('/delete/child/:id', function(req, res) {
   var childId = req.params.id;
 
   // Find and Delete the child using the Id
-  child.findByIdAndRemove(childId, function(err, todo) {
+  Child.findByIdAndRemove(childId, function(err, todo) {
 
     if (err) {
       console.log(err);
@@ -299,7 +299,7 @@ app.post('/add/parent/:id', function(req, res) {
   };
 
   // Using the Parent model, create a new parent entry
-  var entry = new parent(result);
+  var entry = new Parent(result);
 
   // Save the entry to the database
   entry.save(function(err, doc) {
@@ -321,7 +321,7 @@ app.post('/delete/parent/:id', function(req, res) {
   console.log("Deleted parent");
 
   // Find and delete the parent using the Id
-  parent.findByIdAndRemove(parentId, function(err, todo) {
+  Parent.findByIdAndRemove(parentId, function(err, todo) {
 
     if (err) {
       console.log(err);
