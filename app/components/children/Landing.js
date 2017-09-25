@@ -11,9 +11,28 @@ var Landing = React.createClass({
         <div className="row">
           <div className="col-lg-3">
           Sidebar (filter)
+
+          <ul> 
+          <li>Music</li>
+          <li>Sports</li>
+          <li>Video Games</li>
+          <li>Movies</li>
+          <li>Arts & Crafts</li>
+          <li>Building</li>
+          <li>Outdoor Recreation</li>
+          <li>Educational</li>
+          </ul>
           </div>
-          <div className="col-lg-9">
+
+      <div className="col-lg-9">
           Content (posts)
+          <div class="panel panel-default">
+          <div class="panel-heading">
+          <i class="fa fa-calendar" aria-hidden="true"></i> Results
+          </div>
+          <div class="panel-body" id="results">
+          </div>
+          </div>
           </div>
         </div>
       </div>
