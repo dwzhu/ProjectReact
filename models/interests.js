@@ -38,7 +38,7 @@ var InterestsSchema = new Schema({
     type: Boolean,
     default: false
   },
-  outdoor: {
+  outdoors: {
     type: Boolean,
     default: false
   },

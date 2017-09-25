@@ -11,6 +11,7 @@ var Landing = React.createClass({
         <div className="row">
           <div className="col-lg-3">
           Sidebar (filter)
+
           <ul> 
           <li>Music</li>
           <li>Sports</li>
