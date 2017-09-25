@@ -69,35 +69,13 @@ app.post('/add/child/:id', function(req, res) {
   // Collect Child's Gender
   var gender = req.body.gender;
 
-  // Categories
-  var music = req.body.music;
-  var sports = req.body.sports;
-  var videoGames = req.body.videoGames;
-  var movies = req.body.movies;
-  var artsCrafts = req.body.artsCrafts;
-  var collectibles = req.body.collectibles;
-  var engineering = req.body.engineering;
-  var tech = req.body.tech;
-  var outdoor = req.body.outdoor;
-  var educational = req.body.educational;
-
 
   // "result" object has the exact same key-value pairs of the "Child" model
   var result = {
     childFirstName: childFirstName,
     childLastName: childLastName,
     age: age,
-    gender: gender,
-    music: music,
-    sports: sports,
-    videoGames: videoGames,
-    movies: movies,
-    artsCrafts: artsCrafts,
-    collectibles: collectibles,
-    engineering: engineering,
-    tech: tech,
-    outdoor: outdoor,
-    educational: educational
+    gender: gender
   };
 
   // Using the Child model, create a new child entry
@@ -112,7 +90,7 @@ app.post('/add/child/:id', function(req, res) {
     // Or, relate the child to the parent
     else {
       // Push the new child to the list of children in the parent
-      parent.findOneAndUpdate({
+      child.findOneAndUpdate({
           '_id': parentId
         }, {
           $push: {
@@ -135,6 +113,138 @@ app.post('/add/child/:id', function(req, res) {
   });
 
 });
+
+
+
+// Add an Interests Route
+app.post('/add/interests/:id', function(req, res) {
+
+  // Collect child id
+  var childId = req.params.id;
+
+  // Categories
+  var music = req.body.music;
+  var sports = req.body.sports;
+  var videoGames = req.body.videoGames;
+  var movies = req.body.movies;
+  var artsCrafts = req.body.artsCrafts;
+  var collectibles = req.body.collectibles;
+  var engineering = req.body.engineering;
+  var tech = req.body.tech;
+  var outdoors = req.body.outdoors;
+  var educational = req.body.educational;
+
+  // "result" object has the exact same key-value pairs of the "Interests" model
+  var result = {
+    music: music,
+    sports: sports,
+    videoGames: videoGames,
+    movies: movies,
+    artsCrafts: artsCrafts,
+    collectibles: collectibles,
+    engineering: engineering,
+    tech: tech,
+    outdoors: outdoors,
+    educational: educational
+  };
+
+  // Using the Interests model, create a new Interest entry
+  var entry = new Interest(result);
+
+  // Save the entry to the database
+  entry.save(function(err, doc) {
+    // log any errors
+    if (err) {
+      console.log(err);
+    }
+    // Or, relate the Interest to the child
+    else {
+      // Push the new Interest to the list of Interests in the child
+      child.findOneAndUpdate({
+          '_id': childId
+        }, {
+          $push: {
+            'Interest': doc._id
+          }
+        }, {
+          new: true
+        })
+        // execute the above query
+        .exec(function(err, doc) {
+          // log any errors
+          if (err) {
+            console.log(err);
+          } else {
+            // Send Success Header
+            res.sendStatus(200);
+          }
+        });
+    }
+  });
+
+});
+
+
+
+// Add a Special Needs Route
+app.post('/add/needs/:id', function(req, res) {
+
+  // Collect child id
+  var childId = req.params.id;
+
+  // Categories
+  var autism = req.body.autism;
+  var blind = req.body.blind;
+  var deaf = req.body.deaf;
+  var ADHD = req.body.ADHD;
+  var other = req.body.other;
+
+  // "result" object has the exact same key-value pairs of the "Interests" model
+  var result = {
+    autism: autism,
+    blind: blind,
+    deaf: deaf,
+    ADHD: ADHD,
+    other: other
+  };
+
+  // Using the SpecialNeeds model, create a new SpecialNeed entry
+  var entry = new SpecialNeeds(result);
+
+  // Save the entry to the database
+  entry.save(function(err, doc) {
+    // log any errors
+    if (err) {
+      console.log(err);
+    }
+    // Or, relate the Special Needs to the child
+    else {
+      // Push the new special need to the list of Special Needs in the child
+      child.findOneAndUpdate({
+          '_id': childId
+        }, {
+          $push: {
+            'specialNeed': doc._id
+          }
+        }, {
+          new: true
+        })
+        // execute the above query
+        .exec(function(err, doc) {
+          // log any errors
+          if (err) {
+            console.log(err);
+          } else {
+            // Send Success Header
+            res.sendStatus(200);
+          }
+        });
+    }
+  });
+
+});
+
+
 
 
 // Delete a child Route
