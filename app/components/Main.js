@@ -1,9 +1,22 @@
-import React from "react";
+// Include React
+var React = require("react");
 
-const Main = props => (
-  <div>
-    {props.children}
-  </div>
-);
+var Landing = require("./children/Landing.js");
+var Login = require("./children/Login.js");
+var Signup = require("./children/Signup.js");
 
-export default Main;
+var Main = React.createClass({
+
+  // Here we render the component
+  render: function() {
+
+    return (
+      <div className="container">
+        <Landing />
+      </div>
+    );
+  }
+});
+
+// Export the component back for use in other files
+module.exports = Main;

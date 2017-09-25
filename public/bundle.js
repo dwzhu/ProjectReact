@@ -1148,7 +1148,50 @@
 /* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	eval("\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(1);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Main = function Main(props) {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    props.children\n  );\n};\n\nexports.default = Main;//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hcHAvY29tcG9uZW50cy9NYWluLmpzPzBiZmUiXSwibmFtZXMiOlsiTWFpbiIsInByb3BzIiwiY2hpbGRyZW4iXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7Ozs7QUFFQSxJQUFNQSxPQUFPLFNBQVBBLElBQU87QUFBQSxTQUNYO0FBQUE7QUFBQTtBQUNHQyxVQUFNQztBQURULEdBRFc7QUFBQSxDQUFiOztrQkFNZUYsSSIsImZpbGUiOiIxODQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSBcInJlYWN0XCI7XG5cbmNvbnN0IE1haW4gPSBwcm9wcyA9PiAoXG4gIDxkaXY+XG4gICAge3Byb3BzLmNoaWxkcmVufVxuICA8L2Rpdj5cbik7XG5cbmV4cG9ydCBkZWZhdWx0IE1haW47XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gLi9hcHAvY29tcG9uZW50cy9NYWluLmpzIl0sInNvdXJjZVJvb3QiOiIifQ==");
+	eval("\"use strict\";\n\n// Include React\nvar React = __webpack_require__(1);\n\nvar Landing = __webpack_require__(185);\nvar Login = __webpack_require__(186);\nvar Signup = __webpack_require__(212);\n\nvar Main = React.createClass({\n  displayName: \"Main\",\n\n\n  // Here we render the component\n  render: function render() {\n\n    return React.createElement(\n      \"div\",\n      { className: \"container\" },\n      React.createElement(Landing, null)\n    );\n  }\n});\n\n// Export the component back for use in other files\nmodule.exports = Main;//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hcHAvY29tcG9uZW50cy9NYWluLmpzPzBiZmUiXSwibmFtZXMiOlsiUmVhY3QiLCJyZXF1aXJlIiwiTGFuZGluZyIsIkxvZ2luIiwiU2lnbnVwIiwiTWFpbiIsImNyZWF0ZUNsYXNzIiwicmVuZGVyIiwibW9kdWxlIiwiZXhwb3J0cyJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBLElBQUlBLFFBQVEsbUJBQUFDLENBQVEsQ0FBUixDQUFaOztBQUVBLElBQUlDLFVBQVUsbUJBQUFELENBQVEsR0FBUixDQUFkO0FBQ0EsSUFBSUUsUUFBUSxtQkFBQUYsQ0FBUSxHQUFSLENBQVo7QUFDQSxJQUFJRyxTQUFTLG1CQUFBSCxDQUFRLEdBQVIsQ0FBYjs7QUFFQSxJQUFJSSxPQUFPTCxNQUFNTSxXQUFOLENBQWtCO0FBQUE7OztBQUUzQjtBQUNBQyxVQUFRLGtCQUFXOztBQUVqQixXQUNFO0FBQUE7QUFBQSxRQUFLLFdBQVUsV0FBZjtBQUNFLDBCQUFDLE9BQUQ7QUFERixLQURGO0FBS0Q7QUFWMEIsQ0FBbEIsQ0FBWDs7QUFhQTtBQUNBQyxPQUFPQyxPQUFQLEdBQWlCSixJQUFqQiIsImZpbGUiOiIxODQuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBJbmNsdWRlIFJlYWN0XG52YXIgUmVhY3QgPSByZXF1aXJlKFwicmVhY3RcIik7XG5cbnZhciBMYW5kaW5nID0gcmVxdWlyZShcIi4vY2hpbGRyZW4vTGFuZGluZy5qc1wiKTtcbnZhciBMb2dpbiA9IHJlcXVpcmUoXCIuL2NoaWxkcmVuL0xvZ2luLmpzXCIpO1xudmFyIFNpZ251cCA9IHJlcXVpcmUoXCIuL2NoaWxkcmVuL1NpZ251cC5qc1wiKTtcblxudmFyIE1haW4gPSBSZWFjdC5jcmVhdGVDbGFzcyh7XG5cbiAgLy8gSGVyZSB3ZSByZW5kZXIgdGhlIGNvbXBvbmVudFxuICByZW5kZXI6IGZ1bmN0aW9uKCkge1xuXG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XG4gICAgICAgIDxMYW5kaW5nIC8+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG59KTtcblxuLy8gRXhwb3J0IHRoZSBjb21wb25lbnQgYmFjayBmb3IgdXNlIGluIG90aGVyIGZpbGVzXG5tb2R1bGUuZXhwb3J0cyA9IE1haW47XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vYXBwL2NvbXBvbmVudHMvTWFpbi5qcyJdLCJzb3VyY2VSb290IjoiIn0=");
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports) {
+
+	eval("\"use strict\";//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxODUuanMiLCJzb3VyY2VSb290IjoiIn0=");
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports) {
+
+	eval("\"use strict\";//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxODYuanMiLCJzb3VyY2VSb290IjoiIn0=");
+
+/***/ }),
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */
+/***/ (function(module, exports) {
+
+	eval("\"use strict\";//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIyMTIuanMiLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ })
 /******/ ]);
