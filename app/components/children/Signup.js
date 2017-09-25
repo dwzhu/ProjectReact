@@ -9,7 +9,7 @@ var Signup = React.createClass({
     return (
     	
       <div className="container">
-
+      Signup
       </div>    
     );
   }
