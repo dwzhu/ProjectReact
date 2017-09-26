@@ -7,7 +7,6 @@ body {
 
 /* Header */
 .page-header {
-  font color: white;
   color: white;
   height: 50px;
   left: -100px;
@@ -16,18 +15,44 @@ body {
 }
 
 h1 {
-  font color: white;
   color: white;
   left: -100px;
   text-align: left;
 }
 
+/* Sidebar */
+
+ #sidebar-wrapper {
+
+	float: left;
+ 	color: white;
+ 	list-style: none;
+
+ }
+
+ .sidebar-nav{
+ 	list-style: none;
+ 	padding-left: 0;
+ }
+
+ #sidebar-brand {
+ 	color: white;
+ }
+
+.sidebar-nav *{
+	color: white;
+}
 
 /* Results */
 .results {
     
-    width: 100%;
+    width: 75%;
+    display: inline-block;
 
+}
+
+.panel {
+	margin: 0 0 0 15%;
 }
 
 .panel-heading {
