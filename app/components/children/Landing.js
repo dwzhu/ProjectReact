@@ -7,35 +7,52 @@ var Landing = React.createClass({
   render: function() {
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3">
-          Sidebar (filter)
 
-          <ul> 
-          <li>Music</li>
-          <li>Sports</li>
-          <li>Video Games</li>
-          <li>Movies</li>
-          <li>Arts & Crafts</li>
-          <li>Building</li>
-          <li>Outdoor Recreation</li>
-          <li>Educational</li>
-          </ul>
+<div className="page-header">
+  <h1>PlayMeet</h1>
+
+        <div id="sidebar-wrapper">
+            <ul className="sidebar-nav">
+                <li className="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
           </div>
 
-      <div className="col-lg-9">
-          Content (posts)
-          <div class="panel panel-default">
-          <div class="panel-heading">
-          <i class="fa fa-calendar" aria-hidden="true"></i> Results
+      <div className="results">
+          <br />
+          <div className="panel panel-default">
+          <div className="panel-heading">
+          <i className="fa fa-globe" aria-hidden="true"></i> Results
           </div>
-          <div class="panel-body" id="results">
+          <div className="panel-body" id="results">
           </div>
           </div>
           </div>
         </div>
-      </div>
     );
   }
 });
