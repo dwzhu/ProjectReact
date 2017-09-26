@@ -10,37 +10,86 @@ var Landing = React.createClass({
 
 <div className="page-header">
   <h1>PlayMeet</h1>
-
         <div id="sidebar-wrapper">
             <ul className="sidebar-nav">
                 <li className="sidebar-brand">
+                <br />
+      <div className="checkbox navbar-btn">
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
                     <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
+                        Music
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Sports
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Video Games
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Movies
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Arts & Crafts
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Collectibles
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Building
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Outdoor Recreation
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Educational
+                    </a> 
+                    </label>
+                    <br />
+            <label className="navbar-link" for="filterUnfulfilled">
+                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                    <a href="#">
+                        Special Needs
+                    </a> 
+                    </label>
+                    <br />
+                    </div>
                 </li>
             </ul>
           </div>
+
 
       <div className="results">
           <br />
