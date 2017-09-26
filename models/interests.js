@@ -48,7 +48,7 @@ var InterestsSchema = new Schema({
   }
 });
 
-// Create the Child model with Mongoose
+// Create the Interest model with Mongoose
 var Interest = mongoose.model("Interest", InterestsSchema);
 
 // Export it for use elsewhere
