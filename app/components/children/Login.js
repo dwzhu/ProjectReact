@@ -19,7 +19,7 @@ var Login = React.createClass({
                             <h1><strong>PlayMeet</strong> Login &amp; Register Forms</h1>
                             <div className="description">
                             	<p>
-	                            	PlayMeet is a free open-source web-based app for <strong>parents, children & communities</strong> to connect. 
+	                            	PlayMeet is a free open-source web-based app for <strong> parents, children & communities</strong> to connect. 
 	                            	Fork the repository on <a href="https://github.com/dwzhu/ProjectReact" target="_blank"><strong>GitHub</strong></a>, 
 	                            	customize and use it as you like!
                             	</p>
@@ -104,18 +104,14 @@ var Login = React.createClass({
 				                        	<input type="text" name="form-email" placeholder="Email..." className="form-email form-control" id="form-email" />
 				                        </div>
 				                        <div className="form-group">
-<<<<<<< HEAD
+
 				                        	<label className="sr-only" for="form-zipcode">Zip Code</label>
 				                        	<input type="text" name="form-zipcode" placeholder="Zip Code..." className="form-zipcode form-control" id="form-zipcode" />
 				                        </div>
 				                        <div className="form-group">
-				                        	<label className="sr-only" for="form-about-yourself">About yourself</label>
-				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
-=======
 				                        	<label className="sr-only" for="form-about-yourself">About yourself (and your children)</label>
 				                        	<textarea name="form-about-yourself" placeholder="About yourself (and your children)..." 
->>>>>>> 5a50fcba2a60b8d5e88cad5d618cc2e292957ecf
-				                        				className="form-about-yourself form-control" id="form-about-yourself"></textarea>
+				                        	className="form-about-yourself form-control" id="form-about-yourself"></textarea>
 				                        </div>
 				                        <button onClick={
 				                        ()=>props.changepagestate("Landing")
