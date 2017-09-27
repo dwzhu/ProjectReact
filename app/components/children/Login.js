@@ -16,11 +16,11 @@ var Login = React.createClass({
                 	
                     <div className="row">
                         <div className="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Bootstrap</strong> Login &amp; Register Forms</h1>
+                            <h1><strong>PlayMeet</strong> Login &amp; Register Forms</h1>
                             <div className="description">
                             	<p>
-	                            	This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap. 
-	                            	Download it on <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a>, 
+	                            	PlayMeet is a free open-source web-based app for<strong>parents, children & communities</strong> to connect. 
+	                            	Fork the repository on <a href="https://github.com/dwzhu/ProjectReact" target="_blank"><strong>GitHub</strong></a>, 
 	                            	customize and use it as you like!
                             	</p>
                             </div>
@@ -122,7 +122,8 @@ var Login = React.createClass({
         <footer>
         	<div className="container">
         		<div className="row">
-        			
+        			<br>
+        			</br>
         			<div className="col-sm-8 col-sm-offset-2">
         				<div className="footer-border"></div>
         				<p>Developed by Teresa Kropp, Onik Ter-Tatevossian, Lyle Horowitz & David Zhu

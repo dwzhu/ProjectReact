@@ -11,7 +11,7 @@ var Main = React.createClass({
 
     return (
       <div className="container-fluid">
-        <Landing />
+        <Login />
       </div>
     );
   }
