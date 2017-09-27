@@ -94,11 +94,11 @@ var Login = React.createClass({
 				                        	<input type="text" name="form-first-name" placeholder="First name..." className="form-first-name form-control" id="form-first-name" />
 				                        </div>
 				                        <div className="form-group">
-				                        	<label class="sr-only" for="form-last-name">Last name</label>
+				                        	<label className="sr-only" for="form-last-name">Last name</label>
 				                        	<input type="text" name="form-last-name" placeholder="Last name..." className="form-last-name form-control" id="form-last-name" />
 				                        </div>
 				                        <div className="form-group">
-				                        	<label class="sr-only" for="form-email">Email</label>
+				                        	<label className="sr-only" for="form-email">Email</label>
 				                        	<input type="text" name="form-email" placeholder="Email..." className="form-email form-control" id="form-email" />
 				                        </div>
 				                        <div className="form-group">
@@ -120,13 +120,13 @@ var Login = React.createClass({
         </div>
 
         <footer>
-        	<div class="container">
-        		<div class="row">
+        	<div className="container">
+        		<div className="row">
         			
-        			<div class="col-sm-8 col-sm-offset-2">
-        				<div class="footer-border"></div>
-        				<p>Made by Anli Zaimi at <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a> 
-        					having a lot of fun. <i class="fa fa-smile-o"></i></p>
+        			<div className="col-sm-8 col-sm-offset-2">
+        				<div className="footer-border"></div>
+        				<p>Developed by Teresa Kropp, Onik Ter-Tatevossian, Lyle Horowitz & David Zhu
+        				<i className="fa fa-smile-o"></i></p>
         			</div>
         			
         		</div>
