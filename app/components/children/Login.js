@@ -50,7 +50,9 @@ var Login = React.createClass({
 				                        	<label className="sr-only" for="form-password">Password</label>
 				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password" />
 				                        </div>
-				                        <button type="submit" className="btn">Sign in!</button>
+				                        <button onClick={
+				                        ()=>props.changepagestate("Landing")
+				                        } type="submit" className="btn">Sign in!</button>
 				                    </form>
 			                    </div>
 		                    </div>
@@ -102,11 +104,17 @@ var Login = React.createClass({
 				                        	<input type="text" name="form-email" placeholder="Email..." className="form-email form-control" id="form-email" />
 				                        </div>
 				                        <div className="form-group">
+				                        	<label className="sr-only" for="form-zipcode">Zip Code</label>
+				                        	<input type="text" name="form-zipcode" placeholder="Zip Code..." className="form-zipcode form-control" id="form-zipcode" />
+				                        </div>
+				                        <div className="form-group">
 				                        	<label className="sr-only" for="form-about-yourself">About yourself</label>
 				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
 				                        				className="form-about-yourself form-control" id="form-about-yourself"></textarea>
 				                        </div>
-				                        <button type="submit" className="btn">Sign me up!</button>
+				                        <button onClick={
+				                        ()=>props.changepagestate("Landing")
+				                        } type="submit" className="btn">Sign me up!</button>
 				                    </form>
 			                    </div>
                         	</div>
