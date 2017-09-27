@@ -6,7 +6,7 @@ var session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const dbConnection = require('./db') // loads our connection to the mongo database
 var passport = require('./passport')
-//var routes = require("./routes/routes");
+var routes = require("./routes/routes");
 
 var app = express();
 
@@ -39,8 +39,7 @@ app.use(passport.session()) // will call the deserializeUser
 
 
 // Routes
-//app.use("/", routes);
-
+routes(app)
 
 //if (process.env.MONGODB_URI) {
   //mongoose.connect(process.env.MONGODB_URI);
