@@ -30,7 +30,7 @@ var ChildSchema = new Schema({
   interests: [{
     type: Schema.Types.ObjectId,
     ref:'Interest'
-  }]
+  }],
 
   // Create a relation with the Special Needs model
   specialNeeds: [{

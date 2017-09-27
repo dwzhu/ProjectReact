@@ -8,7 +8,7 @@ var Login = require("./children/Login.js");
 var Main = React.createClass({
 
 	getInitialState: function(){
-	return{	currentpage: "Login" }
+	return{	currentpage: "Landing" }
 	},
 	
 	renderpage: function(){
