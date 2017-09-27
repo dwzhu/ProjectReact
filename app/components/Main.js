@@ -3,7 +3,6 @@ var React = require("react");
 
 var Landing = require("./children/Landing.js");
 var Login = require("./children/Login.js");
-var Signup = require("./children/Signup.js");
 
 var Main = React.createClass({
 
