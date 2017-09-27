@@ -19,7 +19,7 @@ var Login = React.createClass({
                             <h1><strong>PlayMeet</strong> Login &amp; Register Forms</h1>
                             <div className="description">
                             	<p>
-	                            	PlayMeet is a free open-source web-based app for <strong>parents, children & communities</strong> to connect. 
+	                            	PlayMeet is a free open-source web-based app for <strong> parents, children & communities</strong> to connect. 
 	                            	Fork the repository on <a href="https://github.com/dwzhu/ProjectReact" target="_blank"><strong>GitHub</strong></a>, 
 	                            	customize and use it as you like!
                             	</p>
@@ -50,7 +50,9 @@ var Login = React.createClass({
 				                        	<label className="sr-only" for="form-password">Password</label>
 				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password" />
 				                        </div>
-				                        <button type="submit" className="btn">Sign in!</button>
+				                        <button onClick={
+				                        ()=>props.changepagestate("Landing")
+				                        } type="submit" className="btn">Sign in!</button>
 				                    </form>
 			                    </div>
 		                    </div>
@@ -88,25 +90,31 @@ var Login = React.createClass({
 	                        		</div>
 	                            </div>
 	                            <div className="form-bottom">
-				                    <form role="form" action="" method="post" className="registration-form">
+				                    <form role="form" action="/add/parent" method="post" className="registration-form">
 				                    	<div className="form-group">
-				                    		<label className="sr-only" for="form-first-name">First & Last name</label>
-				                        	<input type="text" name="form-first-name" placeholder="First & Last name..." className="form-first-name form-control" id="form-first-name" />
+				                    		<label className="sr-only" for="form-first-name">First Name</label>
+				                        	<input type="text" name="form-first-name" placeholder="First Name..." className="form-first-name form-control" id="form-first-name" />
 				                        </div>
 				                        <div className="form-group">
-				                        	<label className="sr-only" for="form-last-name">Username</label>
-				                        	<input type="text" name="form-last-name" placeholder="Username..." className="form-last-name form-control" id="form-last-name" />
+				                        	<label className="sr-only" for="form-last-name">Last Name</label>
+				                        	<input type="text" name="form-last-name" placeholder="Last Name..." className="form-last-name form-control" id="form-last-name" />
 				                        </div>
 				                        <div className="form-group">
 				                        	<label className="sr-only" for="form-email">Email</label>
-				                        	<input type="text" name="form-email" placeholder="Email..." className="form-email form-control" id="form-email" />
+				                        	<input type="text" name="form-email" placeholder="Email Address..." className="form-email form-control" id="form-email" />
 				                        </div>
 				                        <div className="form-group">
-				                        	<label className="sr-only" for="form-about-yourself">About yourself (and your children)</label>
-				                        	<textarea name="form-about-yourself" placeholder="About yourself (and your children)..." 
-				                        				className="form-about-yourself form-control" id="form-about-yourself"></textarea>
+				                        	<label className="sr-only" for="form-email">Password</label>
+				                        	<input type="password" name="form-email" placeholder="Password..." className="form-email form-control" id="form-password" />
 				                        </div>
-				                        <button type="submit" className="btn">Sign me up!</button>
+				                        <div className="form-group">
+
+				                        	<label className="sr-only" for="form-zipcode">Zip Code</label>
+				                        	<input type="text" name="form-zipcode" placeholder="Zip Code..." className="form-zipcode form-control" id="form-zipcode" />
+				                        </div>
+				                        <button onClick={
+				                        ()=>props.changepagestate("Landing")
+				                        } type="submit" className="btn">Sign me up!</button>
 				                    </form>
 			                    </div>
                         	</div>
@@ -137,11 +145,52 @@ var Login = React.createClass({
         	</div>
         </footer>
 </div>
-                   
 
     );
   }
 });
+
+
+// $("#signup").on("click", signUp);
+//   function signUp(event) {
+//     event.preventDefault();
+//       var obj = {
+//         parentfirstName: $("#form-first-name").val().trim(),
+//         parentLastName: $("#form-last-name").val().trim(),
+//         email: $("#form-email").val().trim(),
+//         password: $("#form-password").val().trim(),
+//         zipcode: $("#form-zipcode").val().trim(),
+//       }
+
+// if (obj.email.length < 5) {
+//   alert("Email must be at least 5 characters long!")
+// }
+
+// else {
+//   if (obj.password.length < 5) {
+//     alert("Password must be at least 5 characters long!")
+//   }
+
+//     else {
+//     $.post("/add/parent", obj, function(res) {
+//       console.log(res);
+//       if (res === "invalid") {
+//         alert("Username already exists. Please try another one.");
+//       }
+//       else{
+//         localStorage.setItem("loginId", res.id);
+//         console.log(res.id);
+//         alert("You may now log in!")
+//       }
+//     })
+//     $("#form-first-name").val("");
+//     $("#form-last-name").val("");
+//     $("#form-email").val("");
+//     $("#form-password").val("");
+//     $("#form-zipcode").val("");
+//   }}
+// }; 
+
 
 // Export the component back for use in other files
 module.exports = Login;

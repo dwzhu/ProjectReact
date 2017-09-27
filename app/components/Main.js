@@ -4,17 +4,40 @@ var React = require("react");
 var Landing = require("./children/Landing.js");
 var Login = require("./children/Login.js");
 
+
 var Main = React.createClass({
 
-  // Here we render the component
+	getInitialState: function(){
+	return{	currentpage: "Login" }
+	},
+	
+	renderpage: function(){
+	
+		if (this.state.currentpage === "Login")
+			{return <Login getpagestate = {this.changepagestate}/>}
+		if (this.state.currentpage === "Landing")
+			{return <Landing /> }
+	},
+	
+	changepagestate: function(pageName){
+	
+		this.setState({
+			currentpage: pageName
+		})
+	
+	},
+
+
+// Here we render the component
   render: function() {
 
     return (
       <div className="container-fluid">
-        <Login />
+        {this.renderpage()}
       </div>
     );
   }
+
 });
 
 // Export the component back for use in other files
