@@ -1,5 +1,6 @@
 var express = require("express");
 var path = require("path");
+var passport = require('../passport')
 
 // Import the Parent and Child models
 var Parent = require('../models/parent');
@@ -17,6 +18,30 @@ var SpecialNeeds = require('../models/special_needs');
 // React app will handle routing within the app
 
 var routes = function(app) {
+
+// Validate login information
+//app.post("/login", passport.authenticate("local"), function(req, res) {
+    // They won't get this or even be able to access this page if they aren't authed
+   // res.redirect('/Landing');
+//});
+
+app.post('/login', passport.authenticate('local', { successRedirect: '/Landing',
+                                                    failureRedirect: '/Login' }));
+
+
+app.post("/logout", (req, res) => {
+
+  console.log("Logging out");
+  if (req.user) {
+    req.session.destroy()
+    res.clearCookie('connect.sid') // clean up!
+    //return res.json({ msg: 'logging you out' })
+    res.redirect('/Login');
+  } else {
+    return res.json({ msg: 'No user to log out!' })
+  }
+})
+
 
 // Parents Page Render
 app.get('/parents', function(req, res) {
@@ -132,6 +157,8 @@ app.get('/special_needs', function(req, res) {
 // Add a parent Route
 app.post('/add/parent', function(req, res) {
 
+  console.log(req.body);
+
   // Collect Parent's First Name
   var parentFirstName = req.body.parentFirstName;
 
@@ -157,6 +184,15 @@ app.post('/add/parent', function(req, res) {
     zipcode: zipcode
   };
 
+  // Validation
+  Parent.findOne({ 'local.email': email }, (err, userMatch) => {
+    if (userMatch) {
+      return res.json({
+        error: `Sorry, there's already a user with the username: ${email}`
+      })
+    }
+  })
+
   // Using the Parent model, create a new parent entry
   var entry = new Parent(result);
 
@@ -166,6 +202,7 @@ app.post('/add/parent', function(req, res) {
     if (err) {
       console.log(err);
     }
+  res.redirect('/Landing');
   });
 });
 

@@ -7,22 +7,18 @@ var Schema = mongoose.Schema;
 var ChildSchema = new Schema({
   childFirstName: {
     type: String,
-    unique: true,
     required: true
   },
   childLastName: {
     type: String,
-    unique: true,
     required: true
   },
   age: {
     type: Number,
-    unique: true,
     required: true
   },
   gender: {
     type: String,
-    unique: true,
     required: true
   },
 
