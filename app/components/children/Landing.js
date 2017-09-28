@@ -7,6 +7,12 @@ getInitialState: function(){
     return{ search: "https://www.google.com/maps/embed/v1/search?q=s&key=AIzaSyBeOwninWb0rd91LqSDxOzfpaneHuL9Klo"}
     
     },
+
+    filterFunction: function(event){
+    var search = event.target.id
+    this.setState({search: "https://www.google.com/maps/embed/v1/search?q=" + search +
+        "s&key=AIzaSyBeOwninWb0rd91LqSDxOzfpaneHuL9Klo"})
+    },
   // Here we render the component
   render: function() {
 
@@ -20,70 +26,70 @@ getInitialState: function(){
                 <br />
       <div className="checkbox navbar-btn">
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="music" value="true" />
                     <a href="#">
                         Music
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="sports" value="true" />
                     <a href="#">
                         Sports
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="videogames" value="true" />
                     <a href="#">
                         Video Games
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="movies" value="true" />
                     <a href="#">
                         Movies
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="artsandcrafts" value="true" />
                     <a href="#">
                         Arts & Crafts
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="collectibles" value="true" />
                     <a href="#">
                         Collectibles
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="building" value="true" />
                     <a href="#">
                         Building
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="outdoorrecreation" value="true" />
                     <a href="#">
                         Outdoor Recreation
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="educational" value="true" />
                     <a href="#">
                         Educational
                     </a> 
                     </label>
                     <br />
             <label className="navbar-link" htmlFor="filterUnfulfilled">
-                <input type="checkbox" className="autosubmit" id="filterUnfulfilled" value="true" />
+                <input type="checkbox" onClick={this.filterFunction} className="autosubmit" id="specialneeds" value="true" />
                     <a href="#">
                         Special Needs
                     </a> 
