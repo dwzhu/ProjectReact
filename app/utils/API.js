@@ -34,7 +34,6 @@ var API = {
 
         return newResults;
       })
-
   },
 
 
