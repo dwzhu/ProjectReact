@@ -8,18 +8,16 @@ mongoose.promise = Promise
 var ParentSchema = new Schema({
   parentFirstName: {
     type: String,
-    unique: true,
     required: true
   },
   parentLastName: {
     type: String,
-    unique: true,
     required: true
   },
 
   local: {  // Use email as username
-    email: { type: String, unique: false, required: false },
-    password: { type: String, unique: false, required: false }
+    email: { type: String, unique: true, required: true },
+    password: { type: String, unique: true, required: true }
   },
 
   zipcode: {

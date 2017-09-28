@@ -20,7 +20,7 @@ var Login = React.createClass({
                             <div className="description">
                             	<p>
 	                            	PlayMeet is a free open-source web-based app for <strong> parents, children & communities</strong> to connect. 
-	                            	Fork the repository on <a href="https://github.com/dwzhu/ProjectReact" target="_blank"><strong>GitHub</strong></a>, 
+	                            	Fork the repository on <a href="https://github.com/thkropp1/ProjectReact" target="_blank"><strong>GitHub</strong></a>, 
 	                            	customize and use it as you like!
                             	</p>
                             </div>
@@ -41,18 +41,18 @@ var Login = React.createClass({
 	                        		</div>
 	                            </div>
 	                            <div className="form-bottom">
-				                    <form role="form" action="" method="post" className="login-form">
+				                    <form role="form" action="/login" method="post" className="login-form">
 				                    	<div className="form-group">
-				                    		<label className="sr-only" for="form-username">Username</label>
-				                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username" />
+				                        	<label className="sr-only" for="email">Email</label>
+				                        	<input type="email" name="email" placeholder="Username..." className="form-email form-control" id="form-email" required/>
 				                        </div>
 				                        <div className="form-group">
-				                        	<label className="sr-only" for="form-password">Password</label>
-				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password" />
+				                        	<label className="sr-only" for="password">Password</label>
+				                        	<input type="password" name="password" placeholder="Password..." className="form-password form-control" id="form-password" required/>
 				                        </div>
 				                        <button onClick={
 				                        ()=>props.changepagestate("Landing")
-				                        } type="submit" className="btn">Sign in!</button>
+				                        } type="submit" className="btn btn-primary">Login</button>
 				                    </form>
 			                    </div>
 		                    </div>
@@ -93,28 +93,27 @@ var Login = React.createClass({
 				                    <form role="form" action="/add/parent" method="post" className="registration-form">
 				                    	<div className="form-group">
 				                    		<label className="sr-only" for="parentFirstName">First Name</label>
-				                        	<input type="text" name="parentFirstName" placeholder="First Name..." className="form-first-name form-control" id="form-first-name" />
+				                        	<input type="text" name="parentFirstName" placeholder="First Name..." className="form-first-name form-control" id="form-first-name" required/>
 				                        </div>
 				                        <div className="form-group">
 				                        	<label className="sr-only" for="parentLastName">Last Name</label>
-				                        	<input type="text" name="parentLastName" placeholder="Last Name..." className="form-last-name form-control" id="form-last-name" />
+				                        	<input type="text" name="parentLastName" placeholder="Last Name..." className="form-last-name form-control" id="form-last-name" required/>
 				                        </div>
 				                        <div className="form-group">
 				                        	<label className="sr-only" for="email">Email</label>
-				                        	<input type="text" name="email" placeholder="Email Address..." className="form-email form-control" id="form-email" />
+				                        	<input type="email" name="email" placeholder="Email Address(username)..." className="form-email form-control" id="form-email" required/>
 				                        </div>
 				                        <div className="form-group">
 				                        	<label className="sr-only" for="password">Password</label>
-				                        	<input type="password" name="password" placeholder="Password..." className="form-email form-control" id="form-password" />
+				                        	<input type="password" name="password" placeholder="Password..." className="form-password form-control" id="form-password" required/>
 				                        </div>
 				                        <div className="form-group">
-
-				                        	<label className="sr-only" for="zipcode">Zip Code</label>
-				                        	<input type="text" name="zipcode" placeholder="Zip Code..." className="form-zipcode form-control" id="form-zipcode" />
+                                            <label className="sr-only" for="zipcode">Zip Code</label>
+				                        	<input type="number" name="zipcode" placeholder="Zip Code..." className="form-zipcode form-control" id="form-zipcode" />
 				                        </div>
 				                        <button onClick={
 				                        ()=>props.changepagestate("Landing")
-				                        } type="submit" className="btn">Sign me up!</button>
+				                        } type="submit" className="btn btn-primary">Sign me up!</button>
 				                    </form>
 			                    </div>
                         	</div>

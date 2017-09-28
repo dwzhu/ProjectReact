@@ -14,6 +14,11 @@ getInitialState: function(){
 
 <div className="page-header">
   <h1>PlayMeet</h1>
+
+  <form role="form" action="/logout" method="post" class="logout-form">
+    <button className="float-left submit-button btn btn-primary" >Logout</button>
+  </form>
+  
         <div id="sidebar-wrapper">
             <ul className="sidebar-nav">
                 <li className="sidebar-brand">

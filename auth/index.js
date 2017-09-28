@@ -24,7 +24,7 @@ app.get('/parent', (req, res, next) => {
 })
 
 app.post(
-	'/login',
+	'/api/login',
 	function(req, res, next) {
 		console.log(req.body)
 		console.log('================')
