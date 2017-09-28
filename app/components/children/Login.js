@@ -96,7 +96,7 @@ var Login = React.createClass({
 				                        	<input type="number" name="zipcode" placeholder="Zip Code..." className="form-zipcode form-control" id="form-zipcode" />
 				                        </div>
 				                        <button onClick={
-				                        ()=>props.changepagestate("Landing")
+				                        ()=>props.changepagestate("Login")
 				                        } type="submit" className="btn btn-primary">Sign me up!</button>
 				                    </form>
 			                    </div>

@@ -202,7 +202,8 @@ app.post('/add/parent', function(req, res) {
     if (err) {
       console.log(err);
     }
-  res.redirect('/Landing');
+  // Send new user back to Login  
+  res.redirect('/Login');
   });
 });
 
