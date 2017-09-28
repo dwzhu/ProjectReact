@@ -190,10 +190,9 @@ app.post('/add/parent', function(req, res) {
       return res.json({
         error: `Sorry, there's already a user with the username: ${email}`
       })
-    }
-  })
+    } else {
 
-  // Using the Parent model, create a new parent entry
+      // Using the Parent model, create a new parent entry
   var entry = new Parent(result);
 
   // Save the entry to the database
@@ -204,6 +203,11 @@ app.post('/add/parent', function(req, res) {
     }
   res.redirect('/Landing');
   });
+
+    }
+  })
+
+  
 });
 
 
