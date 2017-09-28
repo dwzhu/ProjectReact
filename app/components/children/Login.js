@@ -16,11 +16,11 @@ var Login = React.createClass({
                 	
                     <div className="row">
                         <div className="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>PlayMeet</strong> Login &amp; Register Forms</h1>
+                            <h1><strong>PlayMeet</strong></h1>
                             <div className="description">
                             	<p>
 	                            	PlayMeet is a free open-source web-based app for <strong> parents, children & communities</strong> to connect. 
-	                            	Fork the repository on <a href="https://github.com/thkropp1/ProjectReact" target="_blank"><strong>GitHub</strong></a>, 
+	                            	Fork the repository on <a style={{'color': 'blue'}} href="https://github.com/thkropp1/ProjectReact" target="_blank"><strong>GitHub</strong></a>, 
 	                            	customize and use it as you like!
                             	</p>
                             </div>
@@ -55,23 +55,7 @@ var Login = React.createClass({
 				                        } type="submit" className="btn btn-primary">Login</button>
 				                    </form>
 			                    </div>
-		                    </div>
-		                
-		                	<div className="social-login">
-	                        	<h3>...or login with:</h3>
-	                        	<div className="social-login-buttons">
-		                        	<a className="btn btn-link-2" href="#">
-		                        		<i className="fa fa-facebook"></i> Facebook
-		                        	</a>
-		                        	<a className="btn btn-link-2" href="#">
-		                        		<i className="fa fa-twitter"></i> Twitter
-		                        	</a>
-		                        	<a className="btn btn-link-2" href="#">
-		                        		<i className="fa fa-google-plus"></i> Google Plus
-		                        	</a>
-	                        	</div>
-	                        </div>
-	                        
+		                    </div>   
                         </div>
                         
                         <div className="col-sm-1 middle-border"></div>
