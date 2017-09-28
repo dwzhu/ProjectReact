@@ -50,9 +50,7 @@ var Login = React.createClass({
 				                        	<label className="sr-only" for="password">Password</label>
 				                        	<input type="password" name="password" placeholder="Password..." className="form-password form-control" id="form-password" required/>
 				                        </div>
-				                        <button onClick={
-				                        ()=>props.changepagestate("Landing")
-				                        } type="submit" className="btn btn-primary">Login</button>
+				                        <button type="submit" className="btn btn-primary">Login</button>
 				                    </form>
 			                    </div>
 		                    </div>   
@@ -95,9 +93,7 @@ var Login = React.createClass({
                                             <label className="sr-only" for="zipcode">Zip Code</label>
 				                        	<input type="number" name="zipcode" placeholder="Zip Code..." className="form-zipcode form-control" id="form-zipcode" />
 				                        </div>
-				                        <button onClick={
-				                        ()=>props.changepagestate("Login")
-				                        } type="submit" className="btn btn-primary">Sign me up!</button>
+				                        <button type="submit" className="btn btn-primary">Sign me up!</button>
 				                    </form>
 			                    </div>
                         	</div>
