@@ -1,31 +1,32 @@
 // Include React
 var React = require("react");
 
-var Landing = require("./children/Landing.js");
-var Login = require("./children/Login.js");
+//var Landing = require("./children/Landing.js");
+//var Login = require("./children/Login.js");
 
 
 var Main = React.createClass({
 
-	getInitialState: function(){
-	return{	currentpage: "Login" }
-	},
+	//getInitialState: function(){
+	//return{	currentpage: "Login" }
+	//},
 	
-	renderpage: function(){
+	//renderpage: function(){
 	
-		if (this.state.currentpage === "Login")
-			{return <Login getpagestate = {this.changepagestate}/>}
-		if (this.state.currentpage === "Landing")
-			{return <Landing /> }
-	},
+		//if (this.state.currentpage === "Login")
+			//{return <Login /> }
+			//{return <Login getpagestate = {this.changepagestate}/>}
+		//if (this.state.currentpage === "Landing")
+			//{return <Landing /> }
+	//},
 	
-	changepagestate: function(pageName){
+	//changepagestate: function(pageName){
 	
-		this.setState({
-			currentpage: pageName
-		})
+		//this.setState({
+			//currentpage: pageName
+		//})
 	
-	},
+	//},
 
 
 // Here we render the component
@@ -33,7 +34,7 @@ var Main = React.createClass({
 
     return (
       <div className="container-fluid">
-        {this.renderpage()}
+        {this.props.children}
       </div>
     );
   }
