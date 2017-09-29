@@ -117,7 +117,7 @@ var Login = React.createClass({
         			</br>
         			<div className="col-sm-8 col-sm-offset-2">
         				<div className="footer-border"></div>
-        				<p>Developed by Teresa Kropp, Onik Ter-Tatevossian, Lyle Horowitz & David Zhu</p>
+        				<p>Developed by David Zhu, Onik Ter-Tatevossian, Lyle Horowitz & Teresa Kropp</p>
         			</div>
         			
         		</div>
