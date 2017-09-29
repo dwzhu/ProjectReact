@@ -185,12 +185,12 @@ app.post('/add/parent', function(req, res) {
   };
 
   // Validation
-  //Parent.findOne({ 'local.email': email }, (err, userMatch) => {
-    //if (userMatch) {
-      //return res.json({
-        //error: `Sorry, there's already a user with the username: ${email}`
-      //})
-    //} else {
+  Parent.findOne({ 'local.email': email }, (err, userMatch) => {
+    if (userMatch) {
+      return res.json({
+        error: `Sorry, there's already a user with the username: ${email}`
+      })
+    } else {
 
       // Using the Parent model, create a new parent entry
   var entry = new Parent(result);
@@ -205,7 +205,7 @@ app.post('/add/parent', function(req, res) {
   res.redirect('/Login');
   });
 
-    //}
+    }
   })
 
   
