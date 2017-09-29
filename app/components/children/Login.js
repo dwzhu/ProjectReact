@@ -43,11 +43,11 @@ var Login = React.createClass({
 	                            <div className="form-bottom">
 				                    <form role="form" action="/login" method="post" className="login-form">
 				                    	<div className="form-group">
-				                        	<label className="sr-only" for="email">Email</label>
+				                        	<label className="sr-only" htmlFor="email">Email</label>
 				                        	<input type="email" name="email" placeholder="Username..." className="form-email form-control" id="form-email" required/>
 				                        </div>
 				                        <div className="form-group">
-				                        	<label className="sr-only" for="password">Password</label>
+				                        	<label className="sr-only" htmlFor="password">Password</label>
 				                        	<input type="password" name="password" placeholder="Password..." className="form-password form-control" id="form-password" required/>
 				                        </div>
 				                        <button type="submit" className="btn btn-primary">Login</button>
@@ -74,23 +74,23 @@ var Login = React.createClass({
 	                            <div className="form-bottom">
 				                    <form role="form" action="/add/parent" method="post" className="registration-form">
 				                    	<div className="form-group">
-				                    		<label className="sr-only" for="parentFirstName">First Name</label>
+				                    		<label className="sr-only" htmlFor="parentFirstName">First Name</label>
 				                        	<input type="text" name="parentFirstName" placeholder="First Name..." className="form-first-name form-control" id="form-first-name" required/>
 				                        </div>
 				                        <div className="form-group">
-				                        	<label className="sr-only" for="parentLastName">Last Name</label>
+				                        	<label className="sr-only" htmlFor="parentLastName">Last Name</label>
 				                        	<input type="text" name="parentLastName" placeholder="Last Name..." className="form-last-name form-control" id="form-last-name" required/>
 				                        </div>
 				                        <div className="form-group">
-				                        	<label className="sr-only" for="email">Email</label>
+				                        	<label className="sr-only" htmlFor="email">Email</label>
 				                        	<input type="email" name="email" placeholder="Email Address(username)..." className="form-email form-control" id="form-email" required/>
 				                        </div>
 				                        <div className="form-group">
-				                        	<label className="sr-only" for="password">Password</label>
+				                        	<label className="sr-only" htmlFor="password">Password</label>
 				                        	<input type="password" name="password" placeholder="Password..." className="form-password form-control" id="form-password" required/>
 				                        </div>
 				                        <div className="form-group">
-                                            <label className="sr-only" for="zipcode">Zip Code</label>
+                                            <label className="sr-only" htmlFor="zipcode">Zip Code</label>
 				                        	<input type="number" name="zipcode" placeholder="Zip Code..." className="form-zipcode form-control" id="form-zipcode" />
 				                        </div>
 				                        <button type="submit" className="btn btn-primary">Sign me up!</button>
